@@ -7,7 +7,8 @@ This project represents a collaborative effort with **Karthik** on the **GoodCab
 GoodCabs is a fast-growing cab service company operating in 10 tier-2 cities across India. The company focuses on supporting local drivers, delivering excellent passenger experiences, and fostering sustainable growth.
 
 ## Links
-Live Dashboard: [Click Here]([https://app.powerbi.com/view?r=eyJrIjoiYjY4Njk4MDMtMDcwNS00ZTAyLWIxOTMtNGM4N2JiMzI2ODg3IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9](https://app.powerbi.com/view?r=eyJrIjoiMGE3Mjc5M2UtMmU3Yi00MmE3LTk5ZjUtYzU2MTk0ZGQzOTc1IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9))
+Live Dashboard: [Click Here](https://app.powerbi.com/view?r=eyJrIjoiMGE3Mjc5M2UtMmU3Yi00MmE3LTk5ZjUtYzU2MTk0ZGQzOTc1IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+
 
 ### Key Areas of Analysis:
 - Trip volume
