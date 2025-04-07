@@ -1,66 +1,107 @@
-# GoodCabs Operations Analysis Project
+# GoodCabs Case Study
 
-## Overview
-This project represents a collaborative effort with **Karthik** on the **GoodCabs Operations Analysis**, aimed at helping GoodCabs achieve its ambitious 2024 growth targets. By analyzing key metrics and trends, the project provides actionable insights to drive data-driven decision-making for the company.
+## 📌 Project Background
+GoodCabs is a ride-hailing startup operating in Tier 2 cities across India. The company began operations in 2020 and primarily targets intercity and intracity commuters. Their business model includes app-based bookings, subscription offers, dynamic pricing, and targeted marketing campaigns.
 
-GoodCabs is a fast-growing cab service company operating in 10 tier-2 cities across India. The company focuses on supporting local drivers, delivering excellent passenger experiences, and fostering sustainable growth.
-
----
-
-## Live Dashboard
-Check out the interactive Power BI dashboard here: [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDc0MjU2N2MtMjIzZS00ZmMxLWE3NDYtYTg0YjkxZmFlMTI3IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+As a data analyst at GoodCabs, I was tasked with identifying performance bottlenecks and growth opportunities based on recent trip, customer, and revenue data. The key business metrics we track include Repeat Passenger Rate (RPR), Average Fare per Trip (AFT), and Average Passengers per Ride (APR).
 
 ---
 
-## Key Areas of Analysis
-- **Trip Volume**: Analysis of total trips across cities and months.
-- **Repeat Passenger Trends**: Evaluating customer retention and loyalty.
-- **Passenger Satisfaction**: Insights into satisfaction scores to improve service.
-- **New vs. Repeat Passenger Performance**: Comparison of revenue and trip metrics.
+## 🔍 Insights and Recommendations Are Provided on the Following Key Areas:
+
+- Revenue Trends by City
+- Repeat Passenger Behavior
+- Trip Frequency Analysis
+- New Passenger Acquisition
+
+📁 SQL queries used to inspect and clean the data for this analysis can be found [here](#).
+
+📁 Targeted SQL queries addressing business questions can be found [here](#).
+
+📊 An interactive Tableau dashboard to explore trends is available [here](#).
 
 ---
 
-## Tools Used
-- **Power BI**: Built interactive dashboards for insightful visualizations.
-- **SQL**: Performed complex data queries and analysis.
-- **PowerPoint**: Presented findings effectively to stakeholders.
+## 🗃️ Data Structure & Initial Checks
+The company’s database contains four main tables with over 200,000 records in total:
+
+- **dim_city**: City IDs, Names
+- **dim_date**: Date, Start of Month, Month Name, Day Type
+- **fact_trip**: Trip Details, Passenger ID, Fare, Trip Date
+- **dim_passenger**: Passenger Demographics, Type (New/Repeat)
+
+📌 [Entity Relationship Diagram goes here]
 
 ---
 
-## Dashboards
-The project delivers two interactive dashboard pages:
+## 📈 Executive Summary
 
-1. **Primary Dashboard**:
-   - High-level overview of city-wise trip performance.
-   - Repeat passenger trends and revenue analysis.
+**Top 3 Takeaways:**
 
-2. **Secondary Dashboard**:
-   - Detailed monthly trends.
-   - Peak and low-demand periods.
-   - Passenger demographics for targeted strategies.
+1. **Kochi's monsoon impact** led to the lowest trip volume and revenue drop of ₹12L.
+2. **Jaipur saw a 34% drop in repeat passengers**, causing a ₹7L loss despite consistent pricing.
+3. **Lucknow showed growth (+₹80K)** due to increased weekend demand amid extreme heat.
+
+![Dashboard Snapshot or Trend Graph goes here]
 
 ---
 
-## Key Insights Delivered
-- **Peak and Low-Demand Analysis**: Identified high and low-demand months for optimized resource allocation.
-- **Repeat Passenger Rates**: Highlighted loyalty opportunities to enhance customer retention programs.
-- **Demographic Revenue Patterns**: Targeted high-value customers by analyzing revenue trends across demographics.
+## 🔬 Insights Deep Dive
+
+### 📍 Kochi
+- Loss of ₹12L due to monsoon onset (May 30, 2024).
+- 4.2L drop in weekday repeat trips; 13% fall in RPR.
+- 31% drop in new passenger trips caused ₹3.2L loss.
+- 2-trip frequency dropped by 8%.
+
+📊 *[Visualization: Kochi trend lines]*
+
+### 📍 Jaipur
+- ₹7L loss due to high AFT with low demand.
+- 34% drop in weekday repeat passengers.
+- RPR declined 34%, causing ₹4.5L revenue loss.
+- No increase in higher trip frequency — low new-to-repeat conversion.
+
+📊 *[Visualization: Jaipur demand and RPR]*
+
+### 📍 Lucknow
+- Gain of ₹80K driven by weekend demand (+13%).
+- New passengers up 14%; repeat passengers on weekends up 13%.
+- Weekday revenue also up 3%.
+- RPR declined due to low satisfaction (5.9), drop in max trip frequency (6 → 3), and retention issues.
+
+📊 *[Visualization: Lucknow weekend boost]*
 
 ---
 
-## How to Explore the Project
-1. Visit the [Live Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMGE3Mjc5M2UtMmU3Yi00MmE3LTk5ZjUtYzU2MTk0ZGQzOTc1IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9) to interact with the insights.
-2. Clone this repository to review the dataset and SQL queries used for analysis.
-3. Check the PowerPoint presentation for a concise summary of the findings.
+## 💡 Recommendations
+
+### Kochi
+- **Short-Term**: Monsoon discounts, first-ride offers, corporate plans.
+- **Mid-Term**: Loyalty programs, optimized pricing, ride allocation.
+- **Long-Term**: 2-wheeler fleet for delivery demand, dynamic pricing, subscription models.
+
+### Jaipur
+- **Short-Term**: Weekday ride passes, reactivation campaigns.
+- **Mid-Term**: Dynamic APR, low-demand pricing, referral bonuses.
+- **Long-Term**: Loyalty rewards, AI-based forecasting, personalized offers.
+
+### Lucknow
+- **Short-Term**: Improve service quality, exclusive weekend perks.
+- **Mid-Term**: Weekend bundles, targeted marketing.
+- **Long-Term**: Heat-adaptive pricing, AI-driven demand prediction, customer service upgrades.
 
 ---
 
-## Contact
-Feel free to reach out for queries or feedback:
-- **Contributor 1**: [Viknesh Vengatesh](https://github.com/your-github-profile)
-- **Contributor 2**: Karthik
+## ⚠️ Assumptions & Caveats
+
+1. Missing repeat passenger data for 2% of records assumed as single-trip users.
+2. Rainfall impact estimated based on external weather data aligned with internal booking drops.
+3. Service quality scores used as-is without normalization across cities.
+4. Revenue impact attributed based on linear modeling; no A/B testing data was available.
+5. City-based anomalies (like festival spikes) were controlled via moving averages.
 
 ---
 
-**Let's drive data-driven growth together!**
+📂 This case study is part of a portfolio project by **Vignesh Vengatesh (Vicky)**.
 
