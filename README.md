@@ -8,7 +8,7 @@ GoodCabs is a fast-growing cab service company operating in 10 tier-2 cities acr
 ---
 
 ## Live Dashboard
-Check out the interactive Power BI dashboard here: [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMGE3Mjc5M2UtMmU3Yi00MmE3LTk5ZjUtYzU2MTk0ZGQzOTc1IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+Check out the interactive Power BI dashboard here: [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMDc0MjU2N2MtMjIzZS00ZmMxLWE3NDYtYTg0YjkxZmFlMTI3IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
 ---
 
