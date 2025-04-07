@@ -1,107 +1,142 @@
-# GoodCabs Case Study
+# 🚕 GoodCabs Business Performance Analysis (Jan–Jun 2024)
 
-## 📌 Project Background
-GoodCabs is a ride-hailing startup operating in Tier 2 cities across India. The company began operations in 2020 and primarily targets intercity and intracity commuters. Their business model includes app-based bookings, subscription offers, dynamic pricing, and targeted marketing campaigns.
+## 🔍 Case Overview
 
-As a data analyst at GoodCabs, I was tasked with identifying performance bottlenecks and growth opportunities based on recent trip, customer, and revenue data. The key business metrics we track include Repeat Passenger Rate (RPR), Average Fare per Trip (AFT), and Average Passengers per Ride (APR).
+**GoodCabs**, a ride-hailing platform for tier-2 Indian cities, saw red flags in **June 2024**—a sudden **₹26L revenue drop**.
 
----
+This case study analyzes:
+- Revenue trends
+- Repeat passenger patterns
+- Trip frequency distribution
+- Passenger satisfaction
+- City-level anomalies and targets
 
-## 🔍 Insights and Recommendations Are Provided on the Following Key Areas:
-
-- Revenue Trends by City
-- Repeat Passenger Behavior
-- Trip Frequency Analysis
-- New Passenger Acquisition
-
-📁 SQL queries used to inspect and clean the data for this analysis can be found [here](#).
-
-📁 Targeted SQL queries addressing business questions can be found [here](#).
-
-📊 An interactive Tableau dashboard to explore trends is available [here](#).
+The goal: Identify what's going wrong, where, and how to fix it before losses scale to ₹1 Cr+ in the next 3 months.
 
 ---
 
-## 🗃️ Data Structure & Initial Checks
-The company’s database contains four main tables with over 200,000 records in total:
-
-- **dim_city**: City IDs, Names
-- **dim_date**: Date, Start of Month, Month Name, Day Type
-- **fact_trip**: Trip Details, Passenger ID, Fare, Trip Date
-- **dim_passenger**: Passenger Demographics, Type (New/Repeat)
-
-📌 [Entity Relationship Diagram goes here]
+## 🏭 Domain  
+**Industry**: Transportation / Mobility  
+**Business Model**: Two-sided marketplace (Passengers ↔ Drivers)
 
 ---
 
-## 📈 Executive Summary
+## 🧾 Data Overview
 
-**Top 3 Takeaways:**
+**Time Frame**: Jan–Jun 2024  
+**Volume**: 425K rows  
+**Data Cleanup**: Null handling, duplicates removed, outliers treated
 
-1. **Kochi's monsoon impact** led to the lowest trip volume and revenue drop of ₹12L.
-2. **Jaipur saw a 34% drop in repeat passengers**, causing a ₹7L loss despite consistent pricing.
-3. **Lucknow showed growth (+₹80K)** due to increased weekend demand amid extreme heat.
+### 📦 Data Tables
 
-![Dashboard Snapshot or Trend Graph goes here]
-
----
-
-## 🔬 Insights Deep Dive
-
-### 📍 Kochi
-- Loss of ₹12L due to monsoon onset (May 30, 2024).
-- 4.2L drop in weekday repeat trips; 13% fall in RPR.
-- 31% drop in new passenger trips caused ₹3.2L loss.
-- 2-trip frequency dropped by 8%.
-
-📊 *[Visualization: Kochi trend lines]*
-
-### 📍 Jaipur
-- ₹7L loss due to high AFT with low demand.
-- 34% drop in weekday repeat passengers.
-- RPR declined 34%, causing ₹4.5L revenue loss.
-- No increase in higher trip frequency — low new-to-repeat conversion.
-
-📊 *[Visualization: Jaipur demand and RPR]*
-
-### 📍 Lucknow
-- Gain of ₹80K driven by weekend demand (+13%).
-- New passengers up 14%; repeat passengers on weekends up 13%.
-- Weekday revenue also up 3%.
-- RPR declined due to low satisfaction (5.9), drop in max trip frequency (6 → 3), and retention issues.
-
-📊 *[Visualization: Lucknow weekend boost]*
+| Table Name                        | Description |
+|----------------------------------|-------------|
+| `dim_city`                       | City metadata (`city_id`, `city_name`) |
+| `dim_date`                       | Calendar reference (`date`, `month`, `day_type`) |
+| `fact_passenger_summary`        | Monthly passenger data (total, new, repeat) |
+| `dim_repeat_trip_distribution`  | Monthly repeat passenger trip counts (1–10+) |
+| `fact_trips`                    | Trip-level facts (distance, fare, ratings) |
+| `city_target_passenger_rating` | Target avg. ratings per city |
+| `monthly_target_new_passengers`| Monthly city-level new passenger goals |
+| `monthly_target_trips`         | Monthly city-level trip goals |
 
 ---
 
-## 💡 Recommendations
+## 📊 Metrics Tracked
 
-### Kochi
-- **Short-Term**: Monsoon discounts, first-ride offers, corporate plans.
-- **Mid-Term**: Loyalty programs, optimized pricing, ride allocation.
-- **Long-Term**: 2-wheeler fleet for delivery demand, dynamic pricing, subscription models.
-
-### Jaipur
-- **Short-Term**: Weekday ride passes, reactivation campaigns.
-- **Mid-Term**: Dynamic APR, low-demand pricing, referral bonuses.
-- **Long-Term**: Loyalty rewards, AI-based forecasting, personalized offers.
-
-### Lucknow
-- **Short-Term**: Improve service quality, exclusive weekend perks.
-- **Mid-Term**: Weekend bundles, targeted marketing.
-- **Long-Term**: Heat-adaptive pricing, AI-driven demand prediction, customer service upgrades.
+- Total Trips
+- Total Revenue
+- Repeat Passenger Rate (RPR)
+- New vs. Repeat Ratio
+- Passenger Ratings (Avg)
+- Trip Frequency Buckets (1–10+ trips/month)
+- Target vs Actual (Trips, New Users, Ratings)
 
 ---
 
-## ⚠️ Assumptions & Caveats
+## 🔥 June 2024 Red Flags
 
-1. Missing repeat passenger data for 2% of records assumed as single-trip users.
-2. Rainfall impact estimated based on external weather data aligned with internal booking drops.
-3. Service quality scores used as-is without normalization across cities.
-4. Revenue impact attributed based on linear modeling; no A/B testing data was available.
-5. City-based anomalies (like festival spikes) were controlled via moving averages.
+- **Revenue down ₹26L**
+- **RPR fell across cities**
+- If left unchecked → projected **₹1 Cr loss** by Sep
 
 ---
 
-📂 This case study is part of a portfolio project by **Vignesh Vengatesh (Vicky)**.
+## 🏙️ City-wise Highlights & Issues
+
+### 🧂 Kochi (Monsoon May 30 Onward)
+- 13% RPR drop, 4.2L fewer weekday repeat rides
+- 31% drop in new passengers → ₹3.2L impact
+- **Total Est. Loss: ₹12L**
+
+### 🏜️ Jaipur
+- 34% RPR crash
+- AFT increased without demand pickup → ₹4.5L loss
+- Failed conversion from new to repeat users
+- **Total Est. Loss: ₹7L**
+
+### 🔥 Lucknow (Heatwave, 44.7°C)
+- Weekend rides up by 13%
+- 14% rise in new passengers
+- Poor repeat experience (Avg. rating: 5.9)
+- Risk of churn despite acquisition success
+
+---
+
+## 🧠 Strategic Recommendations
+
+### ✅ Kochi  
+- **Now**: Monsoon coupons, 1st-ride free, corporate tie-ups  
+- **Next**: Loyalty programs, route optimization  
+- **Later**: Dynamic pricing, 2W fleet for hyperlocal services
+
+### ✅ Jaipur  
+- **Now**: Weekday passes, re-engagement campaigns  
+- **Next**: Referral bonuses, tiered loyalty system  
+- **Later**: AI-based trip pricing, seasonal ride bundles
+
+### ✅ Lucknow  
+- **Now**: Focus on service quality + weekend offers  
+- **Next**: Heat-adaptive fare strategy  
+- **Later**: Retention programs for converted new users
+
+---
+
+## 📈 Power BI Dashboard
+
+👉 [Click to View Report](https://app.powerbi.com/view?r=eyJrIjoiMDc0MjU2N2MtMjIzZS00ZmMxLWE3NDYtYTg0YjkxZmFlMTI3IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+
+---
+
+## 🗂️ Entity Relationship Diagram (ERD)
+
+![ERD](A_digital_Entity-Relationship_Diagram_(ERD)_illust.png)
+
+---
+
+## 💡 Final Takeaways
+
+- Business in Tier-2 cities is **event-sensitive**: weather, day type, local trends matter
+- Blanket strategies = burn. Custom local tactics = retention + revenue
+- Acquisition is easy. Retention is the battlefield. 
+
+---
+
+## 👨‍💻 About Me
+
+**Viknesh Vengatesh (Vicky)**  
+Aspiring Data Analyst  
+🔧 Power BI | SQL | Excel | Python  
+📫 [LinkedIn](https://www.linkedin.com/in/your-link)
+
+---
+
+## 🛠 Tools Used
+
+- Power BI for Dashboard  
+- Excel for Data Cleaning  
+- SQL for Data Preparation  
+- Canva for ERD Design
+
+---
 
