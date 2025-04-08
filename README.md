@@ -20,7 +20,7 @@ The Goodcabs database comprises eight tables: Dim_city, Dim_date, Fact_trips, Fa
 
 Prior to analysis, comprehensive quality control checks were conducted to ensure data integrity and familiarity. The SQL queries used for these inspections are available here.
 
----
+![Home_Page](https://github.com/Viknesh-analyst/Business-Insight-360/blob/01d1492bec91df321782ece88dacce5ec7f2ec2b/Home%20Page.png)
 
 ## 3. Executive Summary
 
