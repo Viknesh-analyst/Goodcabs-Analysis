@@ -1,5 +1,11 @@
 # Goodcabs Operations Analysis
 
+## Table Content
+- [Project Overview](#project-overview)
+- [Data Structure & Initial Checks](#data-structure-and-initial-checks)
+- [Executive Summary](executive-summary)
+- [Insights](insights)
+- [Recommendations](recommendations)
 ## 1. Project Overview
 
 Goodcabs, established in 2022, has rapidly expanded its presence in tier-2 Indian cities by empowering local drivers and delivering exceptional service. Currently operating in 10 cities, the company is committed to providing top-notch transportation while fostering sustainable livelihoods. In 2024, Goodcabs aims for aggressive growth and enhanced passenger satisfaction by monitoring key metrics such as trip volume, satisfaction scores, repeat rates, trip distribution, and the proportion of new versus returning passengers.
@@ -29,6 +35,8 @@ Prior to analysis, comprehensive quality control checks were conducted to ensure
 **Revenue Decline:** The year-to-date revenue growth rate is negative, indicating underperformance. Notably, June contributed significantly to this decline, with a reduction in trips leading to a revenue drop of ₹2.6 million. If this trend persists, the company could face a loss of ₹10 million in the next three months.
 
 ![](RGR.png)
+
+## 4. Insights
 
 ### Revenue Trend by Month
 
@@ -70,7 +78,7 @@ Prior to analysis, comprehensive quality control checks were conducted to ensure
 
 ---
 
-## Recommendations
+## 5.Recommendations
 
 ### Kochi
 
