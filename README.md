@@ -38,6 +38,7 @@ Prior to analysis, comprehensive quality control checks were conducted to ensure
 
 **June Downturn:** A significant drop occurred in June, with trips decreasing from 73,000 in May to 63,000, leading to a revenue decline from ₹18 million to ₹15.4 million.
 
+![](Revenue Line chart.png)
 ---
 
 ## City Performance Analysis
