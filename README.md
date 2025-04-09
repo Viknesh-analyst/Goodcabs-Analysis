@@ -16,7 +16,7 @@ An interactive Power BI dashboard is available for download here. The SQL querie
 
 ## 2. Data Structure & Initial Checks
 
-The Goodcabs database comprises eight tables: Dim_city, Dim_date, Fact_trips, Fact_Passenger_summary, among others, totaling approximately 425,000 rows.
+The Goodcabs database comprises eight tables: Dim_city, Dim_date, Fact_trips, Fact_Passenger_summary,dim_repeat_trip_distribution,city_target_passenger_rating, monthly_target_new_passengers,monthly_target_trips among others, totaling approximately 425,000 rows.
 
 Prior to analysis, comprehensive quality control checks were conducted to ensure data integrity and familiarity. The SQL queries used for these inspections are available here.
 
