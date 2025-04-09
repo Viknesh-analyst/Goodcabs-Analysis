@@ -10,7 +10,7 @@ This project provides insights and recommendations in the following key areas:
 - City Performance Analysis – Evaluating city-wise operational strengths, losses, and localized demand shifts.  
 - Trip Frequency Analysis – Identifying customer engagement levels through trip frequency segmentation.  
 
-An interactive Power BI dashboard is available for download here. The SQL queries utilized for data inspection, quality checks, data cleaning, organization, and preparation for the dashboard, as well as targeted business questions, can be found in the respective sections below.[Click Here](https://app.powerbi.com/view?r=eyJrIjoiMDc0MjU2N2MtMjIzZS00ZmMxLWE3NDYtYTg0YjkxZmFlMTI3IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
+An interactive Power BI dashboard is available for download here.[Click Here](https://app.powerbi.com/view?r=eyJrIjoiMDc0MjU2N2MtMjIzZS00ZmMxLWE3NDYtYTg0YjkxZmFlMTI3IiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
 ---
 
