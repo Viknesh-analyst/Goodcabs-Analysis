@@ -20,13 +20,15 @@ The Goodcabs database comprises eight tables: Dim_city, Dim_date, Fact_trips, Fa
 
 Prior to analysis, comprehensive quality control checks were conducted to ensure data integrity and familiarity. The SQL queries used for these inspections are available here.
 
-![Home_Page](ERD.png)
+![](ERD.png)
 
 ## 3. Executive Summary
 
 ### Key Findings
 
 **Revenue Decline:** The year-to-date revenue growth rate is negative, indicating underperformance. Notably, June contributed significantly to this decline, with a reduction in trips leading to a revenue drop of ₹2.6 million. If this trend persists, the company could face a loss of ₹10 million in the next three months.
+
+![](RGR.png)
 
 ### Revenue Trend by Month
 
