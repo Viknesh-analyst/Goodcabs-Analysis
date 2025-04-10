@@ -36,7 +36,7 @@ Prior to analysis, comprehensive quality control checks were conducted to ensure
 
 ![](RGR.png)
 
-## 4. Insights
+## 4.Insights
 
 ### Revenue Trend by Month
 
