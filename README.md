@@ -24,7 +24,7 @@ An interactive Power BI dashboard is available for download here.[Click Here](ht
 
 The Goodcabs database comprises eight tables: Dim_city, Dim_date, Fact_trips, Fact_Passenger_summary,dim_repeat_trip_distribution,city_target_passenger_rating, monthly_target_new_passengers,monthly_target_trips among others, totaling approximately 425,000 rows.
 
-Prior to analysis, comprehensive quality control checks were conducted to ensure data integrity and familiarity. The SQL queries used for these inspections are available here.
+Prior to analysis, comprehensive quality control checks were conducted to ensure data integrity and familiarity.
 
 ![](ERD.png)
 
@@ -32,7 +32,7 @@ Prior to analysis, comprehensive quality control checks were conducted to ensure
 
 ### Key Findings
 
-**Revenue Decline:** The year-to-date revenue growth rate is negative, indicating underperformance. Notably, June contributed significantly to this decline, with a reduction in trips leading to a revenue drop of ₹2.6 million. If this trend persists, the company could face a loss of ₹10 million in the next three months.
+**Revenue Decline:** The year-to-date Average revenue growth rate is negative, indicating underperformance. Notably, June contributed significantly to this decline, with a reduction in trips leading to a revenue drop of ₹2.6 million. If this trend persists, the company could face a loss of ₹10 million in the next three months.
 
 ![](RGR.png)
 
